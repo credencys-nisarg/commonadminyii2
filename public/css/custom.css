@@ -1,0 +1,7 @@
+.navbar-nav>.user-menu>.dropdown-menu>.user-footer {
+    padding: 10px 0 !important;
+}
+.navbar-nav>.user-menu>.dropdown-menu>.user-footer .btn-default {
+    display: inline;
+    padding: 5px 10px !important;
+}

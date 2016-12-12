@@ -1,0 +1,1341 @@
+2016-10-04 11:17:58 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-10-04 11:17:58 [-][-][-][info][application] $_SERVER = [
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'DERBY_HOME' => '/usr/lib/jvm/java-8-oracle/db'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'SUDO_USER' => 'shreyansh'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MAIL' => '/var/mail/root'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'JAVA_HOME' => '/usr/lib/jvm/java-8-oracle'
+    'LANG' => 'en_IN'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/bash'
+    'HOME' => '/root'
+    'LANGUAGE' => 'en_IN:en'
+    'LOGNAME' => 'root'
+    'J2SDKDIR' => '/usr/lib/jvm/java-8-oracle'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'SUDO_GID' => '1000'
+    'DISPLAY' => ':0'
+    'J2REDIR' => '/usr/lib/jvm/java-8-oracle/jre'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/shreyansh/.Xauthority'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475579878.8764
+    'REQUEST_TIME' => 1475579878
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-24 12:50:10 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The message path /var/www/html/commonadminyii2/console/config/../messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:305
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-24 12:50:10 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '81788938'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1520'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-nfYW1Vw4Lg'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477313410.0392
+    'REQUEST_TIME' => 1477313410
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-24 12:51:19 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path /var/www/html/commonadminyii2/console/config/backend is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-24 12:51:19 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '81788938'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1520'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-nfYW1Vw4Lg'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477313479.6762
+    'REQUEST_TIME' => 1477313479
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-24 12:52:11 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path /var/www/html/commonadminyii2/console/config/backend/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-24 12:52:11 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '81788938'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1520'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-nfYW1Vw4Lg'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477313531.0577
+    'REQUEST_TIME' => 1477313531
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-24 12:54:42 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path  /var/www/html/commonadminyii2//.. is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-24 12:54:42 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '81788938'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1520'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-nfYW1Vw4Lg'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477313682.4016
+    'REQUEST_TIME' => 1477313682
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-24 12:55:15 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path  /var/www/html/commonadminyii2/backend/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-24 12:55:15 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '81788938'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1520'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-nfYW1Vw4Lg'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477313715.3064
+    'REQUEST_TIME' => 1477313715
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-24 13:01:42 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path  /var/www/html/commonadminyii2/backend/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-24 13:01:42 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '81788938'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1520'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-nfYW1Vw4Lg'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477314102.1981
+    'REQUEST_TIME' => 1477314102
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:07:35 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path /var/www/html/commonadminyii2/console/config/ backend/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:07:35 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477375655.4256
+    'REQUEST_TIME' => 1477375655
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:08:29 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path /var/www/html/commonadminyii2/console/config/../backend/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:08:29 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477375709.7692
+    'REQUEST_TIME' => 1477375709
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:11:34 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The message path /var/www/html/commonadminyii2/console/config/../backend/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:305
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:11:34 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477375894.5686
+    'REQUEST_TIME' => 1477375894
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:12:29 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The message path /var/www/html/commonadminyii2/console/config/../messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:305
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:12:29 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477375949.9323
+    'REQUEST_TIME' => 1477375949
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:13:58 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The message path  /var/www/html/commonadminyii2/common/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:305
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:13:58 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477376038.2756
+    'REQUEST_TIME' => 1477376038
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:14:18 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The message path  common/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:305
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:14:18 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477376058.2535
+    'REQUEST_TIME' => 1477376058
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:14:25 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The message path  /common/messages is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:305
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/config/i18...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:14:25 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477376065.6772
+    'REQUEST_TIME' => 1477376065
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@app/config/i18n.php'
+    ]
+    'argc' => 3
+]
+2016-10-25 06:22:35 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The source path /var/www/html/commonadminyii2/backend/config../../../ is not a valid directory.' in /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/controllers/MessageController.php:296
+Stack trace:
+#0 [internal function]: yii\console\controllers\MessageController->actionExtract('@backend/config...')
+#1 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('extract', Array)
+#4 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('extract', Array)
+#5 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#6 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#7 /var/www/html/commonadminyii2/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /var/www/html/commonadminyii2/yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-25 06:22:35 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/vaishakhi'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'SESSION' => 'ubuntu'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4002'
+    'WINDOWID' => '73400330'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1537'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'unity-gtk-module'
+    'USER' => 'vaishakhi'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'PWD' => '/var/www/html/commonadminyii2'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'unity-settings-daemon'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/vaishakhi'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'vaishakhi'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-yWVJNW5nly'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/vaishakhi/.Xauthority'
+    'OLDPWD' => '/home/vaishakhi'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1477376555.5383
+    'REQUEST_TIME' => 1477376555
+    'argv' => [
+        0 => './yii'
+        1 => 'message/extract'
+        2 => '@backend/config/i18n.php'
+    ]
+    'argc' => 3
+]

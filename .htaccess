@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteBase /commonadminyii2/
+
+RewriteRule ^$ /commonadminyii2/backend/web/ [L]
+#Redirect backend.php /backend/
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . index.php
+
+php_value upload_max_filesize 100M
+php_value post_max_size 120M
+php_value memory_limit 256M
+php_value max_execution_time 0
+php_value max_input_time 0
+#post_max_size = 100M
